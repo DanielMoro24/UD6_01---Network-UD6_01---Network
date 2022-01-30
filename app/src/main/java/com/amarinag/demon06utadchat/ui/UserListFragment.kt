@@ -54,8 +54,8 @@ class UserListFragment : Fragment() {
         RetrofitConfig.SERVICE.getUsers().enqueue(object : Callback<UserResponse> {
             override fun onResponse(call: Call<UserResponse>, response: Response<UserResponse>) {
                 if (response.isSuccessful) {
-                    val user = response.body()
-                    adapter.submitList(user?.users.toMap())
+                    val user2 = response.body()
+                    adapter.submitList(user2?.users.toMap())
                 } else {
                     Log.e("Network", "error en la conexion")
                 }
