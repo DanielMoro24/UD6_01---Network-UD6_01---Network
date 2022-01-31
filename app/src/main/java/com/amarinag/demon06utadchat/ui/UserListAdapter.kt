@@ -7,8 +7,9 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.amarinag.demon06utadchat.databinding.ItemUserBinding
 import com.amarinag.demon06utadchat.models.UserObject
+import com.amarinag.demon06utadchat.network.response.User
 
-class UserListAdapter() :
+class UserListAdapter(private val onUserClicked: (UserObject)-> Unit) :
     ListAdapter<UserObject, UserListAdapter.ViewHolder>(DiffUtilCallback) {
 
     inner class ViewHolder(val binding: ItemUserBinding) :
@@ -25,6 +26,8 @@ class UserListAdapter() :
         holder.binding.txtvUsername.text = user.Username
         holder.binding.txtvLevel.text = user.level
         holder.binding.txtvEmail.text = user.email
+        holder.binding.root.setOnClickListener { onUserClicked(user)
+        }
     }
 
 }

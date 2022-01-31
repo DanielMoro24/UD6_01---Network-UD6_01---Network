@@ -10,6 +10,7 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.amarinag.demon06utadchat.databinding.FragmentUserslistBinding
+import com.amarinag.demon06utadchat.models.UserObject
 import com.amarinag.demon06utadchat.network.RetrofitConfig
 import com.amarinag.demon06utadchat.network.response.UserResponse
 import com.amarinag.demon06utadchat.network.response.toMap
@@ -22,7 +23,11 @@ class UserListFragment : Fragment() {
 
     private var _binding: FragmentUserslistBinding? = null
     private val binding get() = _binding!!
-    private val adapter: UserListAdapter = UserListAdapter()
+    private val adapter: UserListAdapter = UserListAdapter {
+        val action2 = UserListFragmentDirections
+            .actionUserListFragmentToUserDetailFragment2(userId = it.id)
+        findNavController().navigate(action2)
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -41,7 +46,7 @@ class UserListFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         binding.rvUsers.layoutManager = LinearLayoutManager(context, RecyclerView.VERTICAL, true)
         binding.rvUsers.adapter = this.adapter
-        getMsg()
+        getUsers()
         binding.floatingActionButton.setOnClickListener {
             val action = UserListFragmentDirections.actionUserListFragmentToAddUserFragment2()
             findNavController().navigate(action)
@@ -49,13 +54,19 @@ class UserListFragment : Fragment() {
     }
 
 
+    override fun onResume() {
+        super.onResume()
+        getUsers()
+    }
 
-    private fun getMsg() {
+
+
+    private fun getUsers() {
         RetrofitConfig.SERVICE.getUsers().enqueue(object : Callback<UserResponse> {
             override fun onResponse(call: Call<UserResponse>, response: Response<UserResponse>) {
                 if (response.isSuccessful) {
-                    val user2 = response.body()
-                    adapter.submitList(user2?.users.toMap())
+                    val user = response.body()
+                    adapter.submitList(user?.users.toMap())
                 } else {
                     Log.e("Network", "error en la conexion")
                 }

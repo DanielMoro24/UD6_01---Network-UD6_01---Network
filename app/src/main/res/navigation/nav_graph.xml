@@ -12,9 +12,23 @@
         <action
             android:id="@+id/action_userListFragment_to_addUserFragment2"
             app:destination="@id/addUserFragment2" />
+        <action
+            android:id="@+id/action_userListFragment_to_userDetailFragment2"
+            app:destination="@id/userDetailFragment2" />
     </fragment>
     <fragment
         android:id="@+id/addUserFragment2"
         android:name="com.amarinag.demon06utadchat.ui.AddUserFragment"
         android:label="AddUserFragment" />
+    <fragment
+        android:id="@+id/userDetailFragment2"
+        android:name="com.amarinag.demon06utadchat.ui.UserDetailFragment"
+        android:label="UserDetailFragment" >
+        <argument
+            android:name="userId"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_userDetailFragment2_to_userListFragment"
+            app:destination="@id/userListFragment" />
+    </fragment>
 </navigation>
