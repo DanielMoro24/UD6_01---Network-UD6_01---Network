@@ -44,7 +44,7 @@ class UserListFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.rvUsers.layoutManager = LinearLayoutManager(context, RecyclerView.VERTICAL, true)
+        binding.rvUsers.layoutManager = LinearLayoutManager(context, RecyclerView.VERTICAL, false)
         binding.rvUsers.adapter = this.adapter
         getUsers()
         binding.floatingActionButton.setOnClickListener {

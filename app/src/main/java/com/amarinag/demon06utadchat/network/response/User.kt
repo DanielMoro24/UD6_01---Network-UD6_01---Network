@@ -2,24 +2,23 @@ package com.amarinag.demon06utadchat.network.response
 
 
 import com.amarinag.demon06utadchat.models.UserObject
-
+import com.google.gson.annotations.Expose
 
 data class User(
-
-    val id: Int,
-
-    val Username: String,
-
-    val name: String,
-
+    @Expose
     val Surname: String,
-
-    val email: String,
-
+    @Expose
+    val Username: String,
+    @Expose
     val age: Int,
-
+    @Expose
+    val email: String,
+    @Expose
+    val id: Int,
+    @Expose
     val level: String,
-
+    @Expose
+    val name: String
 )
 
 fun User.toMsgObjectExt(): UserObject {

@@ -7,17 +7,37 @@
     tools:context=".UserDetailFragment">
 
     <TextView
-        android:id="@+id/txtv_nameDetail"
+        android:id="@+id/txtv_levelDetail"
         android:layout_width="103dp"
         android:layout_height="21dp"
-        android:layout_marginBottom="40dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginBottom="464dp"
         android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/txtv_usernameDetail"
-        app:layout_constraintEnd_toEndOf="@+id/txtv_ageDetail"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.087"
+        app:layout_constraintStart_toEndOf="@+id/txtv_ageDetail" />
+
+    <TextView
+        android:id="@+id/txtv_emailDetail"
+        android:layout_width="103dp"
+        android:layout_height="21dp"
+        android:layout_marginBottom="20dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/txtv_levelDetail"
+        app:layout_constraintEnd_toEndOf="@+id/txtv_levelDetail"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/txtv_ageDetail"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintStart_toStartOf="@+id/txtv_levelDetail" />
+
+    <TextView
+        android:id="@+id/txtv_ageDetail"
+        android:layout_width="103dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginBottom="464dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/ttv_surnameDetail"
@@ -30,51 +50,31 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/txtv_levelDetail"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.946" />
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/txtv_usernameDetail"
         android:layout_width="103dp"
         android:layout_height="21dp"
-        android:layout_marginBottom="32dp"
+        android:layout_marginBottom="20dp"
         android:text="TextView"
         app:layout_constraintBottom_toTopOf="@+id/txtv_ageDetail"
         app:layout_constraintEnd_toEndOf="@+id/txtv_ageDetail"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/txtv_ageDetail" />
 
     <TextView
-        android:id="@+id/txtv_emailDetail"
+        android:id="@+id/txtv_nameDetail"
         android:layout_width="103dp"
         android:layout_height="21dp"
-        android:layout_marginBottom="28dp"
+        android:layout_marginBottom="40dp"
         android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/txtv_levelDetail"
-        app:layout_constraintEnd_toEndOf="@+id/txtv_levelDetail"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/txtv_levelDetail" />
-
-    <TextView
-        android:id="@+id/txtv_ageDetail"
-        android:layout_width="103dp"
-        android:layout_height="21dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginBottom="544dp"
-        android:text="TextView"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/txtv_levelDetail"
-        android:layout_width="103dp"
-        android:layout_height="21dp"
-        android:layout_marginStart="100dp"
-        android:layout_marginBottom="544dp"
-        android:text="TextView"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.051"
-        app:layout_constraintStart_toEndOf="@+id/txtv_ageDetail" />
+        app:layout_constraintBottom_toTopOf="@+id/txtv_usernameDetail"
+        app:layout_constraintEnd_toEndOf="@+id/txtv_ageDetail"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/txtv_ageDetail"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
     <Button
         android:id="@+id/btn_deleteuser"
@@ -83,6 +83,8 @@
         android:text="Eliminar Usuario"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/txtv_levelDetail"
+        app:layout_constraintHorizontal_bias="0.692"
         app:layout_constraintStart_toStartOf="@+id/txtv_ageDetail"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.534" />
 </androidx.constraintlayout.widget.ConstraintLayout>
