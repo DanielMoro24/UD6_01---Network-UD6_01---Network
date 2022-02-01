@@ -78,13 +78,13 @@
 
     <Button
         android:id="@+id/btn_deleteuser"
-        android:layout_width="196dp"
+        android:layout_width="53dp"
         android:layout_height="58dp"
-        android:text="Eliminar Usuario"
+        app:icon="@drawable/ic_baseline_delete_24"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/txtv_levelDetail"
-        app:layout_constraintHorizontal_bias="0.692"
+        app:layout_constraintHorizontal_bias="0.508"
         app:layout_constraintStart_toStartOf="@+id/txtv_ageDetail"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.534" />
+        app:layout_constraintVertical_bias="0.536" />
 </androidx.constraintlayout.widget.ConstraintLayout>

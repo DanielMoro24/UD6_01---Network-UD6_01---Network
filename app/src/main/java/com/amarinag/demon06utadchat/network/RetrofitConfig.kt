@@ -17,7 +17,7 @@ object RetrofitConfig {
     //logging.setLevel(Level.BASIC);
 
     private val retrofit = Retrofit.Builder()
-        .baseUrl("http://10.1.200.111:3000/")
+        .baseUrl("http://10.1.200.157:3000/")
         .client(client)
         .addConverterFactory(GsonConverterFactory.create())
         .build()

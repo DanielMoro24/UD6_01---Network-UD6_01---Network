@@ -12,6 +12,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:text="TextView"
+        android:fontFamily="@font/supermercado_regular"
         app:layout_constraintBottom_toTopOf="@+id/txtv_email"
         app:layout_constraintEnd_toStartOf="@+id/txtv_level"
         app:layout_constraintHorizontal_bias="0.29"
@@ -25,17 +26,20 @@
         android:layout_height="19dp"
         android:layout_marginBottom="16dp"
         android:text="TextView"
+        android:fontFamily="@font/supermercado_regular"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.138"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
+        style="@style/GreenText"
         android:id="@+id/txtv_level"
         android:layout_width="123dp"
         android:layout_height="21dp"
         android:layout_marginTop="16dp"
         android:text="TextView"
+        android:fontFamily="@font/supermercado_regular"
         app:layout_constraintBottom_toTopOf="@+id/txtv_email"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.593"
